@@ -1,3 +1,28 @@
+.dia{
+  h1{
+    color: #000000;
+  }
+  .daytime{
+    color: #000000;
+  }
+
+  .today{
+    color: #000000;
+  }
+}
+
+.noite{
+  h1{
+    color: #fff;
+  }
+  .daytime{
+    color: #fff;
+  }
+  .today{
+    color: #fff;
+  }
+}
+
 .container{
   display: flex;
   flex-direction: column;
@@ -11,22 +36,22 @@
   }
 
   .content{
-    border: 2px solid red;
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 12px;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 
     .first-row{
       display: flex;
       border-bottom: 2px solid black;
 
       .time-section{
-        background-color: grey;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 20px;
-        border-left: 2px solid black;
+        border-left: 1px solid black;
 
         h1{
           font-size: 22px;
@@ -41,10 +66,11 @@
   }
   .second-row{
     height: 500px;
+    background-size: cover;
+    }
 
     .daytime{
       font-size: 32px;
       padding: 30px;
     }
-  }
 }

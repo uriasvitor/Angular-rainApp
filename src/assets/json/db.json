@@ -68,7 +68,7 @@
         "rain_probability": 100,
         "wind_speedy": "8.38 km/h",
         "description": "Chuvas esparsas",
-        "condition": "rain"
+        "condition": "clear_day"
       },
       {
         "date": "08/10",
@@ -140,7 +140,7 @@
         "rain_probability": 92,
         "wind_speedy": "5.78 km/h",
         "description": "Chuvas esparsas",
-        "condition": "rain"
+        "condition": "fog"
       }
     ]
   }

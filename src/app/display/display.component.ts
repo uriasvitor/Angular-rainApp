@@ -9,14 +9,14 @@ import { Subscription, interval, map, timer } from 'rxjs';
   styleUrls: ['./display.component.scss']
 })
 export class DisplayComponent implements OnInit{
-  condition!: Icondition;
+  item: Icondition = { city: '', currently: '', moon_phase: '', forecast: [] }
   noConnected = 'false';
   timerSubscription: Subscription | null | undefined;
 
-  constructor(private apiConnectService: ApiConnectService){}
+  constructor(private apiConnectService: ApiConnectService){
+  }
 
   ngOnInit():void{
-
     timer(0, 120000).subscribe(()=>{
       this.getDataApi()
     });
@@ -24,19 +24,30 @@ export class DisplayComponent implements OnInit{
 
   getDataApi(){
     this.apiConnectService.getData().subscribe({
-      next:(data)=>{
-        this.condition ={
+      next:(data:Icondition)=>{
+        this.item = {
           city:data.city,
           currently:data.currently,
-          date:data.date
-
-        },
-        console.log(this.condition)
+          moon_phase:data.moon_phase,
+          forecast: data.forecast.map((forecastItem)=>{
+            return {
+              weekday:forecastItem.weekday,
+              date:forecastItem.date,
+              condition:forecastItem.condition,
+              max:forecastItem.max,
+              min:forecastItem.min,
+            }
+          })
+        };
+        console.log(this.item.forecast)
       },
       error:(error)=>{
         console.log(error)
       }
-    }
-    )
+    })
+  }
+
+  getSVGUrl(conditionImgSvg: string): string {
+    return `../../assets/imgs/conditions/${conditionImgSvg}.svg`;
   }
 }

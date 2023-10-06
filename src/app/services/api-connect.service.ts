@@ -14,4 +14,8 @@ export class ApiConnectService {
   getData(): Observable<Icondition>{
     return this.http.get<Icondition>(api)
   }
+
+  getCurrentCondition(): Observable<any>{
+    return this.http.get<any>(api)
+  }
 }

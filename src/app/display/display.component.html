@@ -9,14 +9,14 @@
 
   <div class="content">
     <div class="first-row">
-      <div class="time-section" *ngFor="let items of item.forecast">
+      <div class="time-section" *ngFor="let items of item.forecast.slice(0,7); let i = index" [ngClass]="getCurrentDay(i)">
         <h1>{{items.max}} °C</h1>
         <img [src]="getSVGUrl(items.condition)" alt="SVG" />
         <div class="today">{{items.weekday}}</div>
       </div>
     </div>
     <div class="second-row">
-      <p class="daytime">{{item.currently | uppercase}}</p>
+      <p class="currently">{{item.currently | uppercase}}</p>
     </div>
   </div>
 </div>

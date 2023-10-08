@@ -7,7 +7,7 @@
     "description": "Tempo limpo",
     "currently": "noite",
     "cid": "",
-    "city": "São Paulo, SP",
+    "city": "Salvador, BA",
     "img_id": "27n",
     "humidity": 89,
     "cloudiness": 0.0,
@@ -19,12 +19,12 @@
     "sunset": "06:06 pm",
     "moon_phase": "waning_gibbous",
     "condition_slug": "clear_night",
-    "city_name": "São Paulo",
+    "city_name": "Salvador, Ba",
     "timezone": "-03:00",
     "forecast": [
       {
         "date": "04/10",
-        "weekday": "Qua",
+        "weekday": "Dom",
         "max": 32,
         "min": 19,
         "cloudiness": 100.0,
@@ -36,7 +36,7 @@
       },
       {
         "date": "05/10",
-        "weekday": "Qui",
+        "weekday": "Seg",
         "max": 34,
         "min": 20,
         "cloudiness": 12.0,
@@ -48,7 +48,7 @@
       },
       {
         "date": "06/10",
-        "weekday": "Sex",
+        "weekday": "Ter",
         "max": 35,
         "min": 20,
         "cloudiness": 26.0,
@@ -60,7 +60,7 @@
       },
       {
         "date": "07/10",
-        "weekday": "Sáb",
+        "weekday": "Qua",
         "max": 36,
         "min": 24,
         "cloudiness": 22.0,
@@ -72,7 +72,7 @@
       },
       {
         "date": "08/10",
-        "weekday": "Dom",
+        "weekday": "Qui",
         "max": 22,
         "min": 18,
         "cloudiness": 100.0,
@@ -84,7 +84,7 @@
       },
       {
         "date": "09/10",
-        "weekday": "Seg",
+        "weekday": "Sex",
         "max": 21,
         "min": 17,
         "cloudiness": 100.0,
@@ -96,7 +96,7 @@
       },
       {
         "date": "10/10",
-        "weekday": "Ter",
+        "weekday": "Sab",
         "max": 27,
         "min": 18,
         "cloudiness": 94.0,

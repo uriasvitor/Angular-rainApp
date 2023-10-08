@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 @import "assets/webfonts/poppins/stylesheet.css";
+@import "../src/styles/scss/media-queries.scss";
 
 body{
   height: 100vh;

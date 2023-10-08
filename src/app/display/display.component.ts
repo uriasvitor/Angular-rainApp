@@ -12,11 +12,15 @@ export class DisplayComponent implements OnInit{
   item: Icondition = { city: '', currently: '', moon_phase: '', forecast: [] }
   noConnected = 'false';
   timerSubscription: Subscription | null | undefined;
+  currentDay = '';
+  date = new Date();
+  day = (this.date.getDate() + 1);
 
-  constructor(private apiConnectService: ApiConnectService){
-  }
+  constructor(private apiConnectService: ApiConnectService){}
 
   ngOnInit():void{
+    this.getDataApi()
+
     timer(0, 120000).subscribe(()=>{
       this.getDataApi()
     });
@@ -49,5 +53,14 @@ export class DisplayComponent implements OnInit{
 
   getSVGUrl(conditionImgSvg: string): string {
     return `../../assets/imgs/conditions/${conditionImgSvg}.svg`;
+  }
+
+  getCurrentDay(numberDay:any){
+    console.log(numberDay == this.day, numberDay, this.day)
+    if(numberDay == this.day){
+      numberDay = 'currentDay'
+    }
+
+    return numberDay;
   }
 }

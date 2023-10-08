@@ -1,0 +1,16 @@
+$mobile: 576px;
+$FullScreen:1980px;
+
+@mixin forMobile {
+    @media screen and (max-width: $mobile) {
+        @content;
+    }
+}
+
+//For desktop 1980px
+
+@mixin forFullScreen {
+    @media screen and (max-width: $FullScreen) {
+        @content;
+    }
+}
